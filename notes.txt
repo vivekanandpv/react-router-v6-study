@@ -10,3 +10,9 @@ Phase 2
 
 1. Create Navbar component and house all the links as <NavLink> in it.
 2. Navbar is now composed in App
+
+Phase 3
+
+1. Configure the route of news to accept a route parameter called topic in App
+2. Intercept the topic in News by useParams and destructuring the object
+3. Navbar links for news are updated

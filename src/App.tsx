@@ -20,7 +20,7 @@ const App = () => {
           {/* all routes are exact routes */}
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/news' element={<News />} />
+          <Route path='/news/:topic' element={<News />} />
           <Route path='/contact' element={<Contact />} />
           {/* catch-all route */}
           <Route path='*' element={<NotFound />} />
