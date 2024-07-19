@@ -40,3 +40,7 @@ Phase 8
 
 Phase 9
 1. Home component now uses programmatic navigation using useNavigate hook
+
+Phase 10
+1. About component now uses useSearchParams to intercept and set the search params (aka query)
+2. Navbar now routes to about with lang=kn query

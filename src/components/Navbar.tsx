@@ -27,7 +27,7 @@ const Navbar = () => {
         </li>
         <li>
           {/* replaces (or overwrites) the previous link in the history. Useful in login page scenarios  */}
-          <NavLink to='/about' replace>
+          <NavLink to='/about?lang=kn' replace>
             About
           </NavLink>
         </li>
