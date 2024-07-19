@@ -5,3 +5,8 @@ Phase 1
 3. Create the routed components, such as Home, About, Contact, etc.
 4. Provide the router outlet of <Routes> in the App. This contains the route configuration of <Route>
 5. Application now routes to the components as well as wildcard if the path is provided in the browser's address bar.
+
+Phase 2
+
+1. Create Navbar component and house all the links as <NavLink> in it.
+2. Navbar is now composed in App

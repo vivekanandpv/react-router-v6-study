@@ -5,12 +5,15 @@ import About from './components/About';
 import News from './components/News';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
+import Navbar from './components/Navbar';
 
 const App = () => {
   return (
     <>
       <div className='p-5'>
         <h2>React Router v6 Study</h2>
+        <hr />
+        <Navbar />
         <hr />
         <Routes>
           {/* element could be any JSX */}
