@@ -37,3 +37,6 @@ Phase 7
 
 Phase 8
 1. Navbar component now has different props of NavLink (of Link as well)
+
+Phase 9
+1. Home component now uses programmatic navigation using useNavigate hook
