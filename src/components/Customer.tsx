@@ -10,7 +10,14 @@ const Customer = () => {
           <CustomerList />
         </div>
         <div className='col'>
-          <Outlet />
+          {/* Outlet can be used to drill-down information to the child routes */}
+          <Outlet
+            context={{
+              user: 'roger',
+              roles: ['admin', 'manager'],
+              department: 'system',
+            }}
+          />
         </div>
       </div>
     </>

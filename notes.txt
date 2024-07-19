@@ -25,3 +25,6 @@ Phase 4
 4. Customer component has its own secondary router outlet
 5. Observe the relative path configuration within the secondary routes
 6. Navbar now provides route links for customer
+
+Phase 5
+1. Context data is provided in Customer and accessed via hook in CustomerProfile
