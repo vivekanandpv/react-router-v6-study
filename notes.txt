@@ -28,3 +28,6 @@ Phase 4
 
 Phase 5
 1. Context data is provided in Customer and accessed via hook in CustomerProfile
+
+Phase 6
+1. Customer specific routes are now moved to CustomerRoutes component and the top-level route is configured in App

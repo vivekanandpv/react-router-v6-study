@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import CustomerProfile from './components/CustomerProfile';
 import CustomerTransactions from './components/CustomerTransactions';
 import Customer from './components/Customer';
+import CustomerRoutes from './components/CustomerRoutes';
 
 const App = () => {
   return (
@@ -27,11 +28,9 @@ const App = () => {
           This is a departure from v5. */}
           <Route path='/news/:topic' element={<News />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/customers' element={<Customer />}>
-            <Route path=':id/profile' element={<CustomerProfile />} />
-            <Route path=':id/transactions' element={<CustomerTransactions />} />
-          </Route>
 
+          {/* asterisk * is required as it handles a pattern of routes */}
+          <Route path='/customers/*' element={<CustomerRoutes />} />
           {/* catch-all route */}
           <Route path='*' element={<NotFound />} />
         </Routes>
