@@ -16,3 +16,12 @@ Phase 3
 1. Configure the route of news to accept a route parameter called topic in App
 2. Intercept the topic in News by useParams and destructuring the object
 3. Navbar links for news are updated
+
+Phase 4
+
+1. Take a look at Customer, CustomerList, CustomerProfile, and CustomerTransaction components
+2. Route configuration now has secondary route organization
+3. Customer component has been declared as the layout component for the secondary routes
+4. Customer component has its own secondary router outlet
+5. Observe the relative path configuration within the secondary routes
+6. Navbar now provides route links for customer

@@ -6,6 +6,9 @@ import News from './components/News';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
 import Navbar from './components/Navbar';
+import CustomerProfile from './components/CustomerProfile';
+import CustomerTransactions from './components/CustomerTransactions';
+import Customer from './components/Customer';
 
 const App = () => {
   return (
@@ -24,6 +27,11 @@ const App = () => {
           This is a departure from v5. */}
           <Route path='/news/:topic' element={<News />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/customers' element={<Customer />}>
+            <Route path=':id/profile' element={<CustomerProfile />} />
+            <Route path=':id/transactions' element={<CustomerTransactions />} />
+          </Route>
+
           {/* catch-all route */}
           <Route path='*' element={<NotFound />} />
         </Routes>
