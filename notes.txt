@@ -1,0 +1,7 @@
+Phase 1
+
+1. Install react-router-dom
+2. Provide the route context in the index.tsx
+3. Create the routed components, such as Home, About, Contact, etc.
+4. Provide the router outlet of <Routes> in the App. This contains the route configuration of <Route>
+5. Application now routes to the components as well as wildcard if the path is provided in the browser's address bar.
