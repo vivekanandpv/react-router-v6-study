@@ -44,3 +44,8 @@ Phase 9
 Phase 10
 1. About component now uses useSearchParams to intercept and set the search params (aka query)
 2. Navbar now routes to about with lang=kn query
+
+Phase 11
+1. All routes in App are lazily loaded
+2. Observe the base routes being composed within Suspense component in App. This is mandatory.
+3. All secondary routes in CustomerRoutes are also lazily loaded

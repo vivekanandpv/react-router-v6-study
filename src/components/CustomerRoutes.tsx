@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Route, Routes, useRoutes } from 'react-router-dom';
-import Customer from './Customer';
-import CustomerProfile from './CustomerProfile';
-import CustomerTransactions from './CustomerTransactions';
+import { useRoutes } from 'react-router-dom';
+
+const Customer = React.lazy(() => import('./Customer'));
+const CustomerProfile = React.lazy(() => import('./CustomerProfile'));
+const CustomerTransactions = React.lazy(() => import('./CustomerTransactions'));
 
 const CustomerRoutes = () => {
   const customerRoutes = useRoutes([

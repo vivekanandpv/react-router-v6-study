@@ -1,15 +1,14 @@
 import * as React from 'react';
-import { Route, Routes, useRoutes } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import News from './components/News';
-import Contact from './components/Contact';
-import NotFound from './components/NotFound';
+
+import { useRoutes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import CustomerProfile from './components/CustomerProfile';
-import CustomerTransactions from './components/CustomerTransactions';
-import Customer from './components/Customer';
-import CustomerRoutes from './components/CustomerRoutes';
+
+const Home = React.lazy(() => import('./components/Home'));
+const About = React.lazy(() => import('./components/About'));
+const News = React.lazy(() => import('./components/News'));
+const Contact = React.lazy(() => import('./components/Contact'));
+const NotFound = React.lazy(() => import('./components/NotFound'));
+const CustomerRoutes = React.lazy(() => import('./components/CustomerRoutes'));
 
 const App = () => {
   const appRoutes = useRoutes([
@@ -46,7 +45,9 @@ const App = () => {
         <hr />
         <Navbar />
         <hr />
-        {appRoutes}
+        <React.Suspense fallback={<h3>Loading...</h3>}>
+          {appRoutes}
+        </React.Suspense>
       </div>
     </>
   );
