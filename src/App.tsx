@@ -20,6 +20,8 @@ const App = () => {
           {/* all routes are exact routes */}
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          {/* In version 6, the router prefers the hardcoded path to the dynamically matched one.
+          This is a departure from v5. */}
           <Route path='/news/:topic' element={<News />} />
           <Route path='/contact' element={<Contact />} />
           {/* catch-all route */}
