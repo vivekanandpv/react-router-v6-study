@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useRoutes } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import News from './components/News';
@@ -12,6 +12,33 @@ import Customer from './components/Customer';
 import CustomerRoutes from './components/CustomerRoutes';
 
 const App = () => {
+  const appRoutes = useRoutes([
+    {
+      path: '/',
+      element: <Home />,
+    },
+    {
+      path: '/about',
+      element: <About />,
+    },
+    {
+      path: '/contact',
+      element: <Contact />,
+    },
+    {
+      path: '/news/:topic',
+      element: <News />,
+    },
+    {
+      path: '/customers/*',
+      element: <CustomerRoutes />,
+    },
+    {
+      path: '*',
+      element: <NotFound />,
+    },
+  ]);
+
   return (
     <>
       <div className='p-5'>
@@ -19,21 +46,7 @@ const App = () => {
         <hr />
         <Navbar />
         <hr />
-        <Routes>
-          {/* element could be any JSX */}
-          {/* all routes are exact routes */}
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          {/* In version 6, the router prefers the hardcoded path to the dynamically matched one.
-          This is a departure from v5. */}
-          <Route path='/news/:topic' element={<News />} />
-          <Route path='/contact' element={<Contact />} />
-
-          {/* asterisk * is required as it handles a pattern of routes */}
-          <Route path='/customers/*' element={<CustomerRoutes />} />
-          {/* catch-all route */}
-          <Route path='*' element={<NotFound />} />
-        </Routes>
+        {appRoutes}
       </div>
     </>
   );

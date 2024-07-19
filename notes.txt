@@ -31,3 +31,6 @@ Phase 5
 
 Phase 6
 1. Customer specific routes are now moved to CustomerRoutes component and the top-level route is configured in App
+
+Phase 7
+1. useRoutes hook is used to organize routes in Angular fashion in App as well as CustomerRoutes
