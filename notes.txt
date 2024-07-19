@@ -34,3 +34,6 @@ Phase 6
 
 Phase 7
 1. useRoutes hook is used to organize routes in Angular fashion in App as well as CustomerRoutes
+
+Phase 8
+1. Navbar component now has different props of NavLink (of Link as well)

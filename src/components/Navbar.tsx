@@ -26,16 +26,34 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/about'>About</NavLink>
+          {/* replaces (or overwrites) the previous link in the history. Useful in login page scenarios  */}
+          <NavLink to='/about' replace>
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/contact'>Contact</NavLink>
+          {/* reloads the whole application instead of single-page navigation. 
+          The reloadDocument property can be used to skip client side routing 
+          and let the browser handle the transition normally (as if it were an <a href>). */}
+          <NavLink to='/contact' reloadDocument>
+            Contact
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/news/tech'>News - Tech</NavLink>
+          <NavLink
+            to='/news/tech'
+            state={{ message: 'passed from NavLink for /news/tech' }}
+          >
+            News - Tech
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/news/science'>News - Science</NavLink>
+          <NavLink
+            to='/news/science'
+            state={{ message: 'passed from NavLink for /news/science' }}
+          >
+            News - Science
+          </NavLink>
         </li>
         <li>
           <NavLink to='/customers'>Customers</NavLink>
